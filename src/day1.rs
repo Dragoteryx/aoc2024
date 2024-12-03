@@ -19,8 +19,8 @@ pub fn parse(input: &str) -> (Vec<u32>, Vec<u32>) {
 pub fn part1(input: &(Vec<u32>, Vec<u32>)) -> u32 {
 	let (mut left, mut right) = input.clone();
 
-	left.sort();
-	right.sort();
+	left.sort_unstable();
+	right.sort_unstable();
 
 	left.into_iter()
 		.zip(right)
